@@ -1,0 +1,5 @@
+# DeepSeek Harness Vietnamese language pack.
+# The package's DSH client manifest mounts lib/client.js in web compositions.
+- insert:
+    - id: vietnamese-language-pack
+      name: dsh-vietnamese-language-pack

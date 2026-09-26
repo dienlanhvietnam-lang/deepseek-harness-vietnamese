@@ -1,0 +1,69 @@
+{
+  "name": "dsh-vietnamese-language-pack",
+  "version": "0.1.0",
+  "description": "Vietnamese (Tiếng Việt) language pack for DeepSeek Harness (DSH) — community localization plugin with update-safe fallback to English.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "translations",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web",
+      "immediately": true
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "verify": "node scripts/verify.cjs",
+    "build": "node scripts/build-runtime.cjs",
+    "prepack": "npm run verify"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "vietnamese",
+    "vietnamese-language",
+    "tieng-viet",
+    "language-pack",
+    "localization",
+    "i18n",
+    "translation",
+    "vietnamese-translation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dienlanhvietnam-lang/deepseek-harness-vietnamese.git"
+  },
+  "homepage": "https://github.com/dienlanhvietnam-lang/deepseek-harness-vietnamese#readme",
+  "bugs": {
+    "url": "https://github.com/dienlanhvietnam-lang/deepseek-harness-vietnamese/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-client-locale": ">=0.1.7-rc.2"
+  }
+}

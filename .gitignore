@@ -1,0 +1,15 @@
+node_modules/
+*.log
+.DS_Store
+generated/
+seed/
+scan-exported-locales.txt
+namespace-map.txt
+scripts/scan-exported-locales.cjs
+scripts/extract-current-upstream.cjs
+scripts/map-namespaces.cjs
+scripts/translate-current-upstream.cjs
+scripts/build-plugin-data.cjs
+scripts/find-mojibake.cjs
+npm-pack-dry-run.json
+*.tgz
