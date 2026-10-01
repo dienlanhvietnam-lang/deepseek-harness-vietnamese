@@ -1,6 +1,6 @@
 # DeepSeek Harness Vietnamese Language Pack
 
-![DeepSeek Harness](https://img.shields.io/badge/DeepSeek_Harness-%3E%3D0.1.7--rc.2-2f6feb)
+![DeepSeek Harness](https://img.shields.io/badge/DeepSeek_Harness-%3E%3D0.2.0--rc.2-2f6feb)
 ![Vietnamese coverage](https://img.shields.io/badge/Vietnamese_coverage-100%25-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -8,34 +8,17 @@ Community-maintained **Vietnamese (Tiếng Việt) localization plugin for DeepS
 
 ## Install
 
-Once this repository is published:
-
 ```bash
-dsh plugin --profile web add github:dienlanhvietnam-lang/deepseek-harness-vietnamese
+dsh plugin --profile tauri add github:dienlanhvietnam-lang/deepseek-harness-vietnamese
 ```
 
-Restart the web profile, then choose **Tiếng Việt** in Settings → General → Language.
-
-Remove it with:
-
-```bash
-dsh plugin --profile web remove dsh-vietnamese-language-pack
-```
-
-## Highlights
-
-- Official `addLanguage()` / `locale.register()` integration.
-- No DSH core or binary patching.
-- English fallback for newly introduced untranslated strings.
-- Placeholder validation and namespace-aware dictionaries.
-- Prebuilt `lib/` is committed, so GitHub installs do not require a build step.
-- MIT licensed and community-friendly.
+Restart DeepSeek Harness Desktop, then choose **Tiếng Việt** in Settings → General → Language.
 
 ## Compatibility
 
-Targets DeepSeek Harness `>= 0.1.7-rc.2`, where the external language-pack API is available.
+Targets DeepSeek Harness `>= 0.2.0-rc.2`. For DSH 0.1.x, use the 0.1.x language-pack release.
 
-The `0.1.0` translation snapshot covers **57 namespaces / 2,580 runtime entries / 100% of the audited snapshot** at upstream commit `477b4f420553e8a52c2fbccc464d7561b239c443`. Newer upstream strings safely fall back to English until the next translation update.
+The `0.2.0` translation snapshot covers **58 namespaces / 2,607 runtime entries / 100% of the audited snapshot** at upstream commit `639ed015397290b3745d163aafe02ffee4aa3f84`.
 
 ## Security model
 

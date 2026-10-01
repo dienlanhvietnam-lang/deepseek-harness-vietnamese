@@ -6,14 +6,14 @@
   },
   "upstream": {
     "repository": "deepseek-ai/deepseek-harness",
-    "commit": "477b4f420553e8a52c2fbccc464d7561b239c443",
-    "localePackageVersion": "0.1.7-rc.2"
+    "commit": "639ed015397290b3745d163aafe02ffee4aa3f84",
+    "localePackageVersion": "0.2.0-rc.2"
   },
   "coverage": {
-    "namespaces": 57,
-    "translatedEntries": 2580,
+    "namespaces": 58,
+    "translatedEntries": 2607,
     "missingEntries": 0,
     "percent": 100
   },
-  "generatedAt": "2026-09-26"
+  "generatedAt": "2026-10-01"
 }
