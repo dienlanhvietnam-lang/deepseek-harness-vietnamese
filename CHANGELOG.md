@@ -1,3 +1,8 @@
+## 0.1.1 - 2026-09-30
+
+- Fix DSH 0.2 browser boot by emitting lib/client.js through window.__ModuleLoader__.load(...) instead of raw ESM exports.
+- Add runtime-wrapper regression coverage so CI rejects top-level export in the browser plugin entry.
+
 # Changelog
 
 ## 0.1.0 - 2026-09-26

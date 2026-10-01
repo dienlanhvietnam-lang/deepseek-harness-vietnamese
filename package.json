@@ -1,6 +1,6 @@
 {
   "name": "dsh-vietnamese-language-pack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vietnamese (Tiếng Việt) language pack for DeepSeek Harness (DSH) — community localization plugin with update-safe fallback to English.",
   "type": "module",
   "main": "lib/index.js",

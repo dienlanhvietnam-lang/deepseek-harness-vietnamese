@@ -12,8 +12,10 @@ function ph(s){return [...String(s).matchAll(/\{\{[^{}]+\}\}|\{[^{}]+\}/g)].map(
 if(pkg.name!=='dsh-vietnamese-language-pack') errors.push('package name');
 if(pkg.dsh?.bundle?.patch!=='./cordis.patch.yml') errors.push('dsh bundle patch');
 if(!patch.includes('name: dsh-vietnamese-language-pack')) errors.push('cordis package ref');
-if(!client.includes("id: 'vi'")||!client.includes("label: 'Tiếng Việt'")) errors.push('language registration');
-if(!client.includes("fallback: 'en'")) errors.push('fallback');
+if(!client.includes('window.__ModuleLoader__.load({')) errors.push('module loader wrapper');
+if(/^\s*export\s/m.test(client)) errors.push('raw esm export');
+if(!client.includes('id: "vi"')||!client.includes('label: "Tiếng Việt"')) errors.push('language registration');
+if(!client.includes('fallback: "en"')) errors.push('fallback');
 if(/Ã¡|Ã |Ã¢|Ã£|Ã¨|Ã©|Ãª|Ã¬|Ã­|Ã²|Ã³|Ã´|Ãµ|Ã¹|Ãº|Ã½|Ä‘|Æ°|Æ¡|áº|á»|â€/.test(JSON.stringify(vi))) errors.push('mojibake');
 for(const ns of Object.keys(en)){
  if(!vi[ns]){errors.push('missing namespace '+ns);continue}
