@@ -2,8 +2,18 @@ const fs=require('fs');
 const path=require('path');
 const root=path.resolve(__dirname,'..');
 const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
-const vi=JSON.parse(fs.readFileSync(path.join(root,'translations/vi.json'),'utf8'));
-const en=JSON.parse(fs.readFileSync(path.join(root,'translations/source-en.json'),'utf8'));
+const viBase=JSON.parse(fs.readFileSync(path.join(root,'translations/vi.json'),'utf8'));
+const vi={
+ ...viBase,
+ betterSidebar:JSON.parse(fs.readFileSync(path.join(root,'translations/extensions/betterSidebar.vi.json'),'utf8')),
+ rewind:JSON.parse(fs.readFileSync(path.join(root,'translations/extensions/rewind.vi.json'),'utf8')),
+};
+const enBase=JSON.parse(fs.readFileSync(path.join(root,'translations/source-en.json'),'utf8'));
+const en={
+ ...enBase,
+ betterSidebar:JSON.parse(fs.readFileSync(path.join(root,'translations/extensions/betterSidebar.en.json'),'utf8')),
+ rewind:JSON.parse(fs.readFileSync(path.join(root,'translations/extensions/rewind.en.json'),'utf8')),
+};
 const meta=JSON.parse(fs.readFileSync(path.join(root,'translations/meta.json'),'utf8'));
 const patch=fs.readFileSync(path.join(root,'cordis.patch.yml'),'utf8');
 const client=fs.readFileSync(path.join(root,'lib/client.js'),'utf8');
@@ -27,6 +37,8 @@ for(const ns of Object.keys(en)){
  }
 }
 const count=Object.values(vi).reduce((n,d)=>n+Object.keys(d).length,0);
+if(meta.extensions?.betterSidebar?.entries!==506) errors.push('betterSidebar metadata');
+if(meta.extensions?.rewind?.entries!==37) errors.push('rewind metadata');
 if(meta.coverage?.missingEntries!==0) errors.push('coverage missing');
 if(meta.coverage?.translatedEntries!==count) errors.push('coverage count');
 if(meta.coverage?.percent!==100) errors.push('coverage percent');
