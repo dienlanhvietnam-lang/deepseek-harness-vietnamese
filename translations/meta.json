@@ -10,10 +10,28 @@
     "localePackageVersion": "0.2.0-rc.2"
   },
   "coverage": {
-    "namespaces": 58,
-    "translatedEntries": 2607,
+    "namespaces": 60,
+    "translatedEntries": 3150,
     "missingEntries": 0,
     "percent": 100
   },
-  "generatedAt": "2026-10-01"
+  "generatedAt": "2026-10-01",
+  "extensions": {
+    "betterSidebar": {
+      "package": "dsh-better-sidebar",
+      "version": "0.24.1",
+      "commit": "492661a3ea304ad151611de70e7412494be234da",
+      "namespace": "betterSidebar",
+      "entries": 506,
+      "translationSource": "upstream Vietnamese dictionary"
+    },
+    "rewind": {
+      "package": "dsh-rewind-plugin",
+      "version": "0.15.0",
+      "commit": "7ae70b34f3972365eabbb1898fb5a38621372a76",
+      "namespace": "rewind",
+      "entries": 37,
+      "translationSource": "DMCTN Vietnamese translation"
+    }
+  }
 }

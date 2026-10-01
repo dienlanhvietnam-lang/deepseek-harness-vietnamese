@@ -1,3 +1,9 @@
+## 0.2.1 - 2026-10-01
+
+- Add full Vietnamese coverage for dsh-better-sidebar 0.24.1: 506 UI strings from the plugin's upstream Vietnamese dictionary.
+- Add Vietnamese coverage for dsh-rewind-plugin 0.15.0: 37 UI strings with placeholder-safe translation.
+- Desktop coverage expands to 60 namespaces / 3,150 translated entries while retaining 100% key coverage.
+
 ## 0.2.0 - 2026-10-01
 
 - Sync Vietnamese coverage to DeepSeek Harness dsh-v0.2.0-rc.2 (upstream 639ed015397290b3745d163aafe02ffee4aa3f84).
